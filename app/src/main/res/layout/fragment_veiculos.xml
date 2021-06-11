@@ -35,7 +35,8 @@
                 android:id="@+id/edtMarca"
                 android:hint="Marca"
                 app:layout_constraintTop_toBottomOf="@+id/edtModelo" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="36dp"/>
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="4dp"
+                app:layout_constraintHorizontal_bias="0.285"/>
         <ImageButton
                 android:layout_width="32dp"
                 android:layout_height="32dp"
@@ -68,7 +69,7 @@
                 android:hint="Modelo"
                 app:layout_constraintTop_toBottomOf="@+id/edtPlaca"
                 android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.391"/>
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.282"/>
         <EditText
                 android:layout_width="319dp"
                 android:layout_height="37dp"
@@ -77,7 +78,8 @@
                 android:id="@+id/edtAno"
                 android:hint="Ano"
                 app:layout_constraintTop_toBottomOf="@+id/edtMarca" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.391"/>
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.282"
+                android:layout_marginTop="8dp"/>
         <EditText
                 android:layout_width="319dp"
                 android:layout_height="37dp"
@@ -87,7 +89,8 @@
                 android:hint="Placa"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="16dp" android:layout_marginStart="24dp"
-                app:layout_constraintEnd_toStartOf="@+id/btnIncluir"/>
+                app:layout_constraintEnd_toStartOf="@+id/btnIncluirVeiculos"
+                app:layout_constraintHorizontal_bias="0.083"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

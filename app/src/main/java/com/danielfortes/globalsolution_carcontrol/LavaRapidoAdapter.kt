@@ -14,7 +14,7 @@ import java.net.URI
 class LavaRapidoAdapter(var listaLavaRapido: List<TBLavaRapido>, var listener: LavaRapidoAdapterListener): RecyclerView.Adapter<LavaRapidoAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val txtNomeLava: TextView = view.findViewById(R.id.edtNomeLava)
+        val txtNomeLava: TextView = view.findViewById(R.id.edtNome)
         val txtCEP: TextView = view.findViewById(R.id.edtCEP)
         val txtValor: TextView = view.findViewById(R.id.edtValor)
         val btnExcluir: ImageButton = view.findViewById(R.id.btnExcluirLavaRapido)

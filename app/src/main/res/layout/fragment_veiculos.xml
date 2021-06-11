@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Veiculos">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:id="@+id/gdlEnd"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:id="@+id/gdlBottom"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:id="@+id/gdlTop"/>
+        <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtMarca"
+                android:hint="Marca"
+                app:layout_constraintTop_toBottomOf="@+id/edtModelo" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="36dp"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="fitXY"
+                android:padding="0dp"
+                android:src="@drawable/ic_baseline_add_box_24"
+                android:id="@+id/btnIncluirVeiculos"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" android:layout_marginEnd="12dp"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:id="@+id/gdlStart"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="359dp"
+                android:layout_height="542dp"
+                tools:listitem="@layout/item_tutorial"
+                android:id="@+id/rvVeiculo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAno" app:layout_constraintVertical_bias="0.6"/>
+        <EditText
+                android:layout_width="319dp"
+                android:layout_height="37dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtModelo"
+                android:hint="Modelo"
+                app:layout_constraintTop_toBottomOf="@+id/edtPlaca"
+                android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.391"/>
+        <EditText
+                android:layout_width="319dp"
+                android:layout_height="37dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAno"
+                android:hint="Ano"
+                app:layout_constraintTop_toBottomOf="@+id/edtMarca" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.391"/>
+        <EditText
+                android:layout_width="319dp"
+                android:layout_height="37dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtPlaca"
+                android:hint="Placa"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp" android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnIncluir"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

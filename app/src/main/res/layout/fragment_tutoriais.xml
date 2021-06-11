@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Tutoriais">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:id="@+id/gdlEnd"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:id="@+id/gdlBottom"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:id="@+id/gdlTop"/>
+        <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtTitulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                android:hint="Titulo do Tutorial"/>
+        <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="fitXY"
+                android:padding="0dp"
+                android:src="@drawable/ic_baseline_add_box_24"
+                android:id="@+id/btnIncluirTutorial"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:id="@+id/gdlStart"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="359dp"
+                android:layout_height="542dp"
+                tools:listitem="@layout/item_tutorial"
+                android:id="@+id/rvTutorial"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtLink" app:layout_constraintVertical_bias="0.6"/>
+        <EditText
+                android:layout_width="319dp"
+                android:layout_height="37dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtCorpo"
+                android:hint="Aprenda a trocar o pneu do carro"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTitulo" android:layout_marginTop="8dp"/>
+        <EditText
+                android:layout_width="319dp"
+                android:layout_height="43dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtLink"
+                android:hint="http://youtube.com.br" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtCorpo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
